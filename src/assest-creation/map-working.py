@@ -25,7 +25,7 @@ ax.set_facecolor("none")
 # Draw map (white land)
 # ---------------------------
 ax.add_feature(cfeature.LAND, facecolor="white", edgecolor="white")
-ax.add_feature(cfeature.OCEAN, facecolor="#25272b")
+ax.add_feature(cfeature.OCEAN, facecolor="none")
 
 # Remove borders/gridlines for cleaner look
 ax.set_global()
@@ -37,9 +37,9 @@ for name, (lon, lat) in locations.items():
     ax.plot(
         lon, lat,
         marker='o',
-        markersize=8,
-        markeredgecolor='#1f77ff',
-        markerfacecolor='#1f77ff',
+        markersize=7,
+        markeredgecolor='#00ffe5',
+        markerfacecolor='#00ffe5',
         transform=ccrs.PlateCarree()
     )
 
